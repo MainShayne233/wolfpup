@@ -1,0 +1,60 @@
+<html>
+ 
+  <head>
+
+    <title>WolfPup</title>
+
+<!--    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta>-->
+
+    <script type='text/javascript'>
+	org = { mathdox:{formulaeditor:{options:{dragPalette:true, paletteShow: "none", useBar:true}}}};
+    </script>
+    <script type='text/javascript' src='org/mathdox/formulaeditor/main.js'>
+    </script>
+
+    <style type='text/css'>
+
+      #main {
+        background-color:#FFF;
+        width:50em;
+        font-family:sans-serif;
+      }
+
+      .code {
+        padding-left:2em;
+        font-family:monospace;
+      }
+
+      .formulaeditorinput {
+        margin-right: 2em;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div id='main'>
+
+
+      <textarea id='formula1' class='mathdoxformula' rows='100' cols='100'></textarea>
+
+      <button onclick="checkHTML()">Check!</button>
+
+      <p id="output"></p>
+
+    </div>
+
+  </body>
+
+  <script>
+
+    function checkHTML(){
+      var x = String(document.getElementById("formula1").value);
+      x = x.slice(98,x.length-8);
+      alert(x);
+    }
+
+  </script>
+
+</html>
