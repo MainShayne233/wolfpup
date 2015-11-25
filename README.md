@@ -3,36 +3,85 @@
 
 Output samples
 
-Input: 3
+Input: 4+5-5-5-5+4+4+4
 
 Output:
 
-<OMI>4</OMI>
+<OMA>
+	<OMS cd='arith1' name='plus'/>
+	<OMA>
+		<OMS cd='arith1' name='minus'/>
+		<OMA>
+			<OMS cd='arith1' name='minus'/>
+			<OMA>
+				<OMS cd='arith1' name='minus'/>
+				<OMA>
+					<OMS cd='arith1' name='plus'/>
+					<OMI>4</OMI>
+					<OMI>5</OMI>
+				</OMA>
+				<OMI>5</OMI>
+			</OMA>
+			<OMI>5</OMI>
+		</OMA>
+		<OMI>5</OMI>
+	</OMA>
+	<OMI>4</OMI>
+	<OMI>4</OMI>
+	<OMI>4</OMI>
+</OMA>
 
-Input: 4+5
+
+Input: 4+5*6*7-4-3
 
 Output:
 
-<OMA><OMS cd='arith1' name='plus'/><OMI>4</OMI><OMI>5</OMI></OMA>
+<OMA>
+	<OMS cd='arith1' name='minus'/>
+	<OMA>
+		<OMS cd='arith1' name='minus'/>
+		<OMA>
+			<OMS cd='arith1' name='plus'/>
+			<OMI>4</OMI>
+			<OMA>
+				<OMS cd='arith1' name='times'/>
+				<OMA>
+					<OMS cd='arith1' name='times'/>
+					<OMI>5</OMI>
+					<OMI>6</OMI>
+				</OMA>
+				<OMI>7</OMI>
+			</OMA>
+		</OMA>
+		<OMI>3</OMI>
+	</OMA>
+	<OMI>4</OMI>
+	</OMA>
 
-Input: 4-5
 
-Output:
 
-<OMA><OMS cd='arith1' name='minus'/><OMI>4</OMI><OMI>5</OMI></OMA>
 
-Input: 4.5
 
-Output: <OMF dec='4.5'/>
 
-Input: 4/5
 
-Output:
 
-<OMA style='mfrac'><OMS cd='arith1' name='divide'/><OMI>4</OMI><OMI>5</OMI></OMA>
 
-Input: summation (0,infinity) x^n
 
-Output:
 
-<OMA><OMS cd='arith1' name='sum'/><OMA><OMS cd='interval1' name='integer_interval'/><OMI>0</OMI><OMS cd='nums1' name='infinity'/></OMA><OMBIND><OMS cd='fns1' name='lambda'/><OMBVAR><OMV name='n'/></OMBVAR><OMA><OMS cd='arith1' name='power'/><OMV name='x'/><OMV name='n'/></OMA></OMBIND></OMA>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

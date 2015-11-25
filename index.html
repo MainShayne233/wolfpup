@@ -12,6 +12,9 @@
     <script type='text/javascript' src='org/mathdox/formulaeditor/main.js'>
     </script>
 
+    <script type='text/javascript' src='parse.js'>
+    </script>
+
     <style type='text/css'>
 
       #main {
@@ -39,7 +42,7 @@
 
       <textarea id='formula1' class='mathdoxformula' rows='100' cols='100'></textarea>
 
-      <button onclick="checkHTML()">Check!</button>
+      <button onclick="button_pressed()">Check!</button>
 
       <p id="output"></p>
 
@@ -49,11 +52,7 @@
 
   <script>
 
-    function checkHTML(){
-      var x = String(document.getElementById("formula1").value);
-      x = x.slice(98,x.length-8);
-      alert(x);
-    }
+
 
   </script>
 
