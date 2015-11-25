@@ -67,7 +67,18 @@ function inputParse(){
   return components;
 }
 
+function arith(kind, vals){
+  this.kind = kind;
+  this.vals = vals;
+}
+
+function first_OMA(array){
+  for (i in array){
+
+  }
+}
+
 function button_pressed(){
-  alert(inputParse());
+
 }
 
