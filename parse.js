@@ -72,13 +72,19 @@ function arith(kind, vals){
   this.vals = vals;
 }
 
-function first_OMA(array){
-  for (i in array){
 
+function next_OMA(start,array){
+  for (i = start; start < array.length; i++){
+    if (array[i] == "</OMA>"){
+      return i;
+    }
   }
+  return -1;
 }
 
-function button_pressed(){
 
+function button_pressed(){
+  alert(inputParse());
+  alert(next_OMA(0,inputParse()));
 }
 
